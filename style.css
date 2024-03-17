@@ -56,7 +56,7 @@ nav ul li a:hover {
 
 .content {
     margin-top: 20px; /* Add margin to create space between the navigation bar and the content */
-    text-align: center;
+    text-align: left;
 }
 
 .social-link {
@@ -102,4 +102,8 @@ nav ul li a:hover {
     width: 100%; /* Makes the image fill the circular container */
     height: auto;
     border: none; /* Removes any border around the image */
+}
+
+.header {
+    text-align: left; /* Align header content to the left */
 }

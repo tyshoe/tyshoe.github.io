@@ -57,3 +57,14 @@ nav ul li a:hover {
     margin-top: 20px; /* Add margin to create space between the navigation bar and the content */
     text-align: center;
 }
+
+.social-link {
+    color: inherit;  
+    text-decoration: none
+}
+
+/* Add black underline on hover */
+.social-link:hover {
+    text-decoration: underline;
+    color: inherit; /* Inherit color from parent */
+}

@@ -1,13 +1,79 @@
+:root { 
+    /* Default Styles */
+    --neutral-10: #fafafa;
+    --neutral-20: #fafafa;
+    --neutral-30: #fafafa;
+    --neutral-40: #fafafa;
+    --neutral-50: #a1a1a1;
+    --neutral-60: #878d96;
+    --neutral-70: #5e5e5e;
+    --neutral-80: #515151;
+    --neutral-90: #323232;
+    --neutral-100: #161616;
+}
+
+
+/* Themes */
+
+
+/* Light mode */
+[data-theme='light'] {
+    --neutral-10: #fafafa;
+    --neutral-20: #fafafa;
+    --neutral-30: #fafafa;
+    --neutral-40: #fafafa;
+    --neutral-50: #a1a1a1;
+    --neutral-60: #878d96;
+    --neutral-70: #5e5e5e;
+    --neutral-80: #515151;
+    --neutral-90: #323232;
+    --neutral-100: #161616;
+}
+
+/* Dark mode */
+[data-theme='dark'] {
+    --neutral-10: #161616;
+    --neutral-20: #323232;
+    --neutral-30: #515151;
+    --neutral-40: #5e5e5e;
+    --neutral-50: #878d96;
+    --neutral-60: #a1a1a1;
+    --neutral-70: #bdbdbd;
+    --neutral-80: #d8d8d8;
+    --neutral-90: #f4f4f4;
+    --neutral-100: #fafafa;
+}
+
+/* Dev mode */
+[data-theme='dev'] {
+    --neutral-10: #fafafa;
+    --neutral-20: #f4f4f4;
+    --neutral-30: #d8d8d8;
+    --neutral-40: #bdbdbd;
+    --neutral-50: #a1a1a1;
+    --neutral-60: #878d96;
+    --neutral-70: #5e5e5e;
+    --neutral-80: #515151;
+    --neutral-90: #323232;
+    --neutral-100: #161616;
+}
+
+
+/* Navigation */
+
+
 nav {
-    text-align: center;
     position: sticky;
     top: 0;
-    background-color:aliceblue
+    background-color: var(--neutral-30);
+    display: flex;
+    justify-content: space-between;
 }
 
 nav ul {
     list-style-type: none;
     padding: 10px 0;
+    background-color: var(--neutral-40);
 }
 
 nav ul li {
@@ -15,57 +81,71 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: var(--neutral-100);
     text-decoration: none;
     padding: 10px 20px; 
 }
 
 nav ul li a:hover {
-    color: black;
+    color: var(--neutral-90);
 }
 
-/* Underline styles */
-.nav a::before,
-.nav a::after {
+.expand{
+    position:relative;
+    text-decoration:none;
+    display:inline-block;
+  }
+  .expand:after {
+    display:block;
     content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    background-color: #000000; /* Color of the underline */
-    transition: width 0.3s ease;
+    border-bottom: solid 3px var(--neutral-90);  
+    transform: scaleX(0);  
+    transition: transform 300ms ease-in-out;
+    transform-origin:100% 50%
+  }
+  .expand:hover:after { 
+    transform: scaleX(1);
+    transform-origin:0 50%;
+  }
+
+.theme-selector {
+    /* position: sticky; */
+    /* margin-top: 10px;
+    margin-top: bottom; */
+    background-color: var(--neutral-20);
+    padding: 10px;
+    margin-right: 20px; /* Adjust margin as needed */
 }
 
-.nav a::before {
-    left: 50%;
-    transform: translateX(-50%);
+/* Styling for the select dropdown */
+#theme-select {
+    padding: 10px;
 }
 
-.nav a::after {
-    right: 50%;
-    transform: translateX(50%);
+/* Styling for the options in the dropdown */
+#theme-select option {
+    background-color: var(--neutral-20);
+    color: var(--neutral-100);
 }
 
-/* Hover animation */
-.nav a:hover::before,
-.nav a:hover::after {
-    width: calc(50% - 10px); /* Width of the underline on hover */
-}
 
-/* Permanent underline for selected tab */
-.nav a.selected::before,
-.nav a.selected::after {
-    width: calc(50% - 10px); /* Width of the underline for selected tab */
-}
+/* Profile Header */
+
 
 .header {
+    max-width: 1000px;
     display: flex;
-    text-align: left;
+    justify-content: center;
+    flex: 1;
+    margin: auto;
+    background-color:var(--neutral-30);
+    margin-top: 10px;
 }
 
 .profile-section {
     max-width: 800px;
     margin: 10px;
+    background-color:var(--neutral-40);
 }
 
 .name-section {
@@ -75,7 +155,8 @@ nav ul li a:hover {
 
 .links-section {
     flex: 1;
-    text-align: left;
+    margin: 10px;
+    background-color:var(--neutral-40);
 }
 
 
@@ -107,11 +188,18 @@ nav ul li a:hover {
     margin-right: 5px;
 }
 
+
+
+/* Content of page */
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     line-height: 1.6;
+    background-color: var(--neutral-10);
+    color: var(--neutral-100);
 }
 
 .container {
@@ -120,6 +208,7 @@ body {
     justify-content: center;
     flex: 1;
     margin: auto;
+    background-color:var(--neutral-30);
 }
 
 h1, h2, h3 {
@@ -130,15 +219,15 @@ p {
     margin: 5px 0;
 }
 
-ul {
+/* ul {
     margin: 5px 0;
     padding-left: 20px;
-}
+} */
 
 hr {
     margin: 20px 0;
     border: none;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--neutral-50);
 }
 
 .left-section, .right-section {
@@ -148,7 +237,7 @@ hr {
 
 .separator {
     width: 1px;
-    background-color: #ccc;
+    background-color: var(--neutral-60);
     margin: 0 20px;
 }
 

@@ -4,16 +4,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 0 10%;
+    background-color: var(--neutral-30);
 }
 
 nav {
-    background-color: var(--neutral-30);
+    background-color: var(--neutral-40);
+}
+
+nav ul{
+    padding: 0;
 }
 
 nav ul li {
     display: inline-block;
-    background-color: var(--neutral-40);
+    background-color: var(--neutral-20);
     text-decoration: none;
     padding: 10px 0;
 }

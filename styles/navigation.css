@@ -58,6 +58,8 @@ nav ul li a:hover {
 
 /* Styling for the select dropdown */
 #theme-select {
+    background-color: var(--neutral-40);
+    color: var(--neutral-100);
     padding: 10px;
 }
 
@@ -103,10 +105,10 @@ nav ul li a:hover {
 /* Dark mode */
 [data-theme='dark'] {
     --neutral-10: #161616;
-    --neutral-20: #323232;
-    --neutral-30: #515151;
-    --neutral-40: #5e5e5e;
-    --neutral-50: #878d96;
+    --neutral-20: #161616;
+    --neutral-30: #161616;
+    --neutral-40: #161616;
+    --neutral-50: #161616;
     --neutral-60: #a1a1a1;
     --neutral-70: #bdbdbd;
     --neutral-80: #d8d8d8;

@@ -1,5 +1,8 @@
 nav {
     text-align: center;
+    position: sticky;
+    top: 0;
+    background-color:aliceblue
 }
 
 nav ul {

@@ -1,0 +1,119 @@
+/* Profile Header */
+
+
+.header {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin: auto;
+    background-color:var(--neutral-30);
+    margin-top: 10px;
+}
+
+.profile-section {
+    max-width: 800px;
+    margin: 10px;
+    background-color:var(--neutral-40);
+}
+
+.name-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.links-section {
+    flex: 1;
+    margin: 10px;
+    background-color:var(--neutral-40);
+}
+
+
+.circular-image {
+    width: 150px; /* Adjust the width and height as needed */
+    height: 150px;
+    border-radius: 50%; /* Makes the container circular */
+    overflow: hidden; /* Hides any overflow beyond the circular container */
+}
+
+.circular-image img {
+    display: block;
+    width: 100%; /* Makes the image fill the circular container */
+    height: auto;
+    border: none; /* Removes any border around the image */
+}
+
+.social-links {
+    color: inherit;
+    text-decoration: none;
+}
+
+.social-links:hover {
+    text-decoration: underline;
+    color: inherit; /* Inherit color from parent */
+}
+
+.social-links img {
+    margin-right: 5px;
+}
+
+
+
+/* Content of page */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: var(--neutral-10);
+    color: var(--neutral-100);
+}
+
+.container {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin: auto;
+    background-color:var(--neutral-30);
+}
+
+h1, h2, h3 {
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+/* ul {
+    margin: 5px 0;
+    padding-left: 20px;
+} */
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid var(--neutral-50);
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.separator {
+    width: 1px;
+    background-color: var(--neutral-60);
+    margin: 0 20px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}

@@ -8,7 +8,9 @@ const currentTheme = localStorage.getItem("theme")
 // Set Dropdown to selected theme
 if (currentTheme) {
   document.documentElement.setAttribute("data-theme", currentTheme);
-  if (themeSelect){themeSelect.value = currentTheme;}
+  if (themeSelect) {
+    themeSelect.value = currentTheme;
+  }
 }
 
 // If theme changes, store in local storage

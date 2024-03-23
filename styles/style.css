@@ -1,7 +1,7 @@
 /* Profile Header */
 
 
-.header {
+.profile {
     max-width: 1250px;
     display: flex;
     justify-content: center;
@@ -129,7 +129,7 @@ hr {
     display: flex;
     /* align-items: center; */
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--neutral-50);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* background-color: var(--neutral-50); */
@@ -169,9 +169,10 @@ hr {
 
 .details ul li {
     margin: 5px 5px 0px 0px; /* Add spacing between list items */
-    background-color: #f0f0f0; /* Background color */
+    background-color: var(--neutral-50); /* Background color */
     border-radius: 20px; /* Apply border-radius for pill shape */
     padding: 4px 16px; /* Add padding inside the pill */
+    color: var(--neutral-100);
 }
 
 .details p{

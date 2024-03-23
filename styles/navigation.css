@@ -1,28 +1,26 @@
 /* Navigation */
 
-
-nav {
-    position: sticky;
-    top: 0;
-    background-color: var(--neutral-30);
+header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 10px 0;
-    background-color: var(--neutral-40);
+nav {
+    background-color: var(--neutral-30);
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
+    background-color: var(--neutral-40);
+    text-decoration: none;
+    padding: 10px 0;
 }
 
 nav ul li a {
     color: var(--neutral-100);
-    text-decoration: none;
-    padding: 10px 20px; 
+    padding: 0px 20px; 
 }
 
 nav ul li a:hover {
@@ -50,7 +48,7 @@ nav ul li a:hover {
 }
 
 .theme-selector {
-    background-color: var(--neutral-20);
+    background-color: var(--neutral-10);  
     padding: 10px;
     margin-right: 20px; /* Adjust margin as needed */
 }
@@ -60,6 +58,7 @@ nav ul li a:hover {
     background-color: var(--neutral-40);
     color: var(--neutral-100);
     padding: 10px;
+    border-radius: 8px;
 }
 
 /* Styling for the options in the dropdown */
@@ -107,7 +106,7 @@ nav ul li a:hover {
     --neutral-20: #161616;
     --neutral-30: #161616;
     --neutral-40: #161616;
-    --neutral-50: #161616;
+    --neutral-50: #878d96;
     --neutral-60: #a1a1a1;
     --neutral-70: #bdbdbd;
     --neutral-80: #d8d8d8;

@@ -4,33 +4,33 @@
 .profile-section {
     max-width: 1250px;
     display: flex;
-    justify-content: center;
     margin: auto;
     background-color:var(--neutral-30);
-    margin-top: 10px;
+    /* margin-top: 10px; */
+}
+
+.profile-card {
+    /* overflow: hidden; */
+    border: 1px solid var(--neutral-40);
+    /* border-radius: 8px; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    flex-basis: 50%;
 }
 
 .profile {
     display: flex;
-    margin: 10px;
+    margin: 8px;
     background-color:var(--neutral-40);
-    padding: 20px;
-    flex-basis: 40%;
-}
-
-.profile-card {
-    overflow: hidden;
-    border: 1px solid var(--neutral-40);
-    /* border-radius: 8px; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    padding: 16px;
 }
 
 .profile-picture {
-    width: 150px;
-    height: 150px;
+    width: 144px;
+    height: 144px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 20px;
+
 }
 
 .profile-picture img {
@@ -45,14 +45,14 @@
 
 .social-links {
     display: flex;
-    justify-content: center;
-    padding: 10px;
+    justify-content: flex-start;
+    padding: 8px;
     background-color: var(--neutral-20);
 }
 
 .social-link {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 8px;
 }
 
 .social-link img {
@@ -63,12 +63,13 @@
 .social-links img{
     width: 28px;
     height: 28px;
-    margin: 12px;
+    margin: 8px;
 }
 
 .cover-section {
-    flex-basis: 60%;
-    padding: 20px;
+    flex-basis: 50%;
+    padding: 16px;
+    margin: 8px;
     background-color: var(--neutral-40);
 }
 
@@ -80,7 +81,6 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
     line-height: 1.6;
     background-color: var(--neutral-10);
     color: var(--neutral-100);
@@ -105,7 +105,7 @@ p {
 
 hr {
     max-width: 1250px;
-    margin: 20px auto;
+    margin: 16px auto;
     border: none;
     border-top: 1px solid var(--neutral-50);
 }

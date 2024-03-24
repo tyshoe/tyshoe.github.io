@@ -182,3 +182,15 @@ hr {
 .details p{
     color: grey;
 }
+
+.job {
+    margin-bottom: 30px;
+}
+
+.job ul{
+    list-style-type: disc;
+}
+
+.education {
+    margin-bottom: 30px;
+}

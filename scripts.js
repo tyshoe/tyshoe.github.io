@@ -22,3 +22,15 @@ if (themeSelect) {
     console.log(themeSelect.value);
   });
 }
+
+
+// Get age
+// var birthdate = new Date('2000-02-04');
+// var currentDate = new Date();
+
+// var birthYear = birthdate.getFullYear();
+// var currentYear = currentDate.getFullYear();
+
+// var age = currentYear - birthYear;
+
+// document.getElementById('age').textContent = age;

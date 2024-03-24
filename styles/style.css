@@ -194,3 +194,16 @@ hr {
 .education {
     margin-bottom: 30px;
 }
+
+.skills {
+    display: inline-block;
+}
+  
+.skills span {
+    display: inline-block; /* Display each skill as inline block */
+    background-color: var(--neutral-10); /* Background color for each skill */
+    border: 1px solid var(--neutral-50);
+    padding: 5px 10px; /* Add padding for spacing */
+    margin: 5px; /* Add margin for spacing between skills */
+    border-radius: 5px; /* Add rounded corners */
+}

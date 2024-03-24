@@ -3,42 +3,65 @@
 
 <head>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navigation.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Include Material Icons library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="navigation.js"></script>
+    <!-- <script src="navigation.js"></script> -->
 </head>
 
 <body>
-    <div id="navigation"></div>
-    
-    <header class="profile">
-        <div class="profile-section">
-            <div class="circular-image">
-                <img src="./images/portrait.jpg" alt="Self Portrait" width="200"></img>
-            </div>
-            
-            <h1>Tyler Shoemake</h1>
-            <p>Software Engineer</p>
-        </div>
-            
-        <div class="links-section">
-            <!-- LinkedIn -->
-            <a class="social-links" href="https://www.linkedin.com/in/tylershoemake/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" width="20">linkedin
-            </a>
-            <a class="social-links" href="https://www.linkedin.com/in/tylershoemake/"> </a>
-
-            <!-- GitHub -->
-            <a class="social-links" href="https://github.com/tyshoe" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" width="18">GitHub
-            </a>
-            
-            <link class="material-symbols-outlined" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-            <a class="social-links" href="mailto:tyshoe2010@gmail.com"> <i class="material-icons" width="5">email</i>Email</a></p>
-
-        </div>
+    <!-- <div id="navigation"></div> -->
+    <header class="header">
+        <div></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html" class="expand">Overview</a></li>
+                <li>
+                <a href="detailedresume.html" class="expand">Detailed Resume</a>
+                </li>
+                <li><a href="#" class="expand">Projects</a></li>
+            </ul>
+        </nav>
         
+        <select id="theme-select">
+            <option value="light">Light Mode</option>
+            <option value="dark">Dark Mode</option>
+            <option value="dev">Dev Mode</option>
+        </select>
+    </header>
 
+    
+    <header class="profile-section">
+        <div class="profile-card">
+            <div class="profile">
+                <div class="profile-picture">
+                    <img src="./images/portrait.jpg" alt="Profile Picture">
+                </div>
+                <div class="profile-info">
+                    <h1>Tyler Shoemake</h1>
+                    <h2>Software Engineer</h2>
+                </div>
+            </div>
+            <div class="social-links">
+                <!-- Add more social links as needed -->
+                <a class="social-link" href="https://www.linkedin.com/in/tylershoemake/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+    
+                <!-- GitHub -->
+                <a class="social-link" href="https://github.com/tyshoe" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+                </a>
+    
+                <!-- Mail -->
+                <a class="social-link" href="mailto:tyshoe2010@gmail.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Ic_mail_outline_black_48px.svg" alt="Mail Icon">
+                </a>
+            </div>
+        </div>
+        <div class="cover-section">
+            <p></p>
+        </div>
     </header>
     <hr>
 
@@ -100,7 +123,7 @@
 
     </div>
 
-    <!-- <script src="scripts.js"></script> -->
+    <script src="scripts.js"></script>
     
 </body>
 

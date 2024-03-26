@@ -6,14 +6,9 @@
     display: flex;
     margin: auto;
     background-color:var(--neutral-40);
-    /* margin-top: 10px; */
 }
 
 .profile-card {
-    /* overflow: hidden; */
-    border: 1px solid var(--neutral-40);
-    /* border-radius: 8px; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     flex-basis: 50%;
 }
 
@@ -29,8 +24,7 @@
     height: 144px;
     border-radius: 50%;
     overflow: hidden;
-    margin-right: 20px;
-
+    margin-right: 24px;
 }
 
 .profile-picture img {
@@ -47,23 +41,21 @@
     display: flex;
     justify-content: flex-start;
     padding: 8px;
-    background-color: var(--neutral-40);
 }
 
 .social-link {
     display: inline-block;
     margin: 0 8px;
+    fill: var(--neutral-100);
 }
 
-.social-link img {
-    width: 30px;
-    height: 30px;
+.social-links svg{
+    width: 36px;
+    height: 36px;
 }
 
-.social-links img{
-    width: 28px;
-    height: 28px;
-    margin: 8px;
+.social-links svg:hover{
+    opacity: 65%;
 }
 
 .cover-section {
@@ -72,7 +64,6 @@
     margin: 8px;
     background-color: var(--neutral-40);
 }
-
 
 
 /* Content of page */

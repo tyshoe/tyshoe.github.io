@@ -5,7 +5,7 @@
     max-width: 1250px;
     display: flex;
     margin: auto;
-    background-color:var(--neutral-30);
+    background-color:var(--neutral-40);
     /* margin-top: 10px; */
 }
 
@@ -47,7 +47,7 @@
     display: flex;
     justify-content: flex-start;
     padding: 8px;
-    background-color: var(--neutral-20);
+    background-color: var(--neutral-40);
 }
 
 .social-link {
@@ -92,7 +92,7 @@ body {
     justify-content: center;
     flex: 1;
     margin: auto;
-    background-color:var(--neutral-30);
+    background-color:var(--neutral-40);
 }
 
 h1, h2, h3 {
@@ -173,7 +173,7 @@ hr {
 
 .details ul li {
     margin: 5px 5px 0px 0px; /* Add spacing between list items */
-    background-color: var(--neutral-50); /* Background color */
+    background-color: var(--neutral-30); /* Background color */
     border-radius: 20px; /* Apply border-radius for pill shape */
     padding: 4px 16px; /* Add padding inside the pill */
     color: var(--neutral-100);

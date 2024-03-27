@@ -5,6 +5,7 @@
     max-width: 1250px;
     display: flex;
     margin: auto;
+    margin-top: 50px;
     background-color:var(--neutral-40);
 }
 

@@ -4,12 +4,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10%;
   background-color: var(--neutral-30);
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  position: fixed;
   top: 0;
   border-bottom: solid 1px var(--neutral-50);
+  width: 100%
 }
 
 nav {
@@ -47,17 +46,13 @@ a:is(:link, :active).active {
   background-size: 100% 2px;
 }
 
-.theme-selector {
-  background-color: var(--neutral-10);
-  padding: 8px;
-}
-
 /* Styling for the select dropdown */
 #theme-select {
   background-color: inherit;
   color: var(--neutral-100);
   padding: 8px;
   border-radius: 8px;
+  margin-right: 8px;
 }
 
 /* Styling for the options in the dropdown */

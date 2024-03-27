@@ -23,7 +23,6 @@ if (themeSelect) {
   });
 }
 
-
 // Get age
 // var birthdate = new Date('2000-02-04');
 // var currentDate = new Date();
@@ -35,13 +34,17 @@ if (themeSelect) {
 
 // document.getElementById('age').textContent = age;
 
-
 const activePage = window.location.pathname;
-const activePageName = activePage.split('/')[2];
-const navLinks = document.querySelectorAll('nav a').
-forEach(link =>{
-  if(link.href.includes(`${activePage}`) && !link.href.includes('#') && activePageName !== ''){
-    link.classList.add('active');}
-  else if(activePageName === '' && link.href.includes(`index.html`)){
-    link.classList.add('active');}
-})
+const activePageName = activePage.split("/")[2];
+const navLinks = document.querySelectorAll("nav a").forEach((link) => {
+  if (
+    link.href.includes(`${activePage}`) &&
+    !link.href.includes("#") &&
+    activePageName !== ""
+  ) {
+    link.classList.add("active");
+  } else if (activePageName === "" && link.href.includes(`index.html`)) {
+    link.classList.add("active");
+  }
+  console.log(activePage);
+});

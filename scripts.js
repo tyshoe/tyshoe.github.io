@@ -42,5 +42,6 @@ const navLinks = document.querySelectorAll('nav a').
 forEach(link =>{
   if(link.href.includes(`${activePage}`) && !link.href.includes('#') && activePageName !== ''){
     link.classList.add('active');}
-    console.log(activePage);
+  else if(activePageName === '' && link.href.includes(`index.html`)){
+    link.classList.add('active');}
 })

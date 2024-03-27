@@ -37,8 +37,10 @@ if (themeSelect) {
 
 
 const activePage = window.location.pathname;
+const activePageName = activePage.split('/')[2];
 const navLinks = document.querySelectorAll('nav a').
 forEach(link =>{
-  if(link.href.includes(`${activePage}`) && !link.href.includes('#')){
+  if(link.href.includes(`${activePage}`) && !link.href.includes('#') && activePageName !== ''){
     link.classList.add('active');}
+    console.log(activePage);
 })

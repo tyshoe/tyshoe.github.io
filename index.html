@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" href="styles/default.css">
-    <link rel="stylesheet" href="styles/navigation.css"/>
-    <link rel="stylesheet" href="styles/profile.css"/>
-    <link rel="stylesheet" href="styles/projects.css"/>
-    <link rel="stylesheet" href="styles/overview.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Include Material Icons library -->
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <link rel="stylesheet" href="styles/profile.css" />
+    <link rel="stylesheet" href="styles/projects.css" />
+    <link rel="stylesheet" href="styles/overview.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Include Material Icons library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script src="navigation.js"></script> -->
     <script src="scripts.js" defer></script>
@@ -24,13 +25,13 @@
             <ul>
                 <li><a href="index.html" class="expand">Overview</a></li>
                 <li>
-                <a href="resume.html" class="expand">Resume</a>
+                    <a href="resume.html" class="expand">Resume</a>
                 </li>
                 <li><a href="projects.html" class="expand">Projects</a></li>
                 <!-- <li><a href="#" class="expand">About</a></li> -->
             </ul>
         </nav>
-        
+
         <select id="theme-select">
             <option value="light">Light Mode</option>
             <option value="dark">Dark Mode</option>
@@ -38,7 +39,7 @@
         </select>
     </header>
 
-    
+
     <header class="profile-section">
         <div class="profile-card">
             <div class="profile">
@@ -54,21 +55,27 @@
                 <!-- LinkedIn -->
                 <a class="social-link" href="https://www.linkedin.com/in/tylershoemake/" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+                        <path
+                            d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                        </path>
                     </svg>
                 </a>
-    
+
                 <!-- GitHub -->
                 <a class="social-link" href="https://github.com/tyshoe" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                        </path>
                     </svg>
                 </a>
-    
+
                 <!-- Mail -->
                 <a class="social-link" href="mailto:tyshoe2010@gmail.com" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z" color="000000"/>
+                        <path
+                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"
+                            color="000000" />
                     </svg>
                 </a>
             </div>
@@ -92,7 +99,7 @@
                     <h3>Idaho Forest Group</h3>
                     <h4>April 2022 &#8213; Present</h4>
                     <p>Build and maintain an automated inventory management system
-                        that provides information and controls for operators to 
+                        that provides information and controls for operators to
                         monitor operations.
                     </p>
                     <ul>
@@ -126,135 +133,153 @@
         </div>
 
     </div>
-    <div class="container">
-        <div class="left-section">
-            <h1>Skills and Tools</h1>
-            <h2>Active</h2>
-            <p>Jython<br>Python<br>Java<br>MSSQL<br>html<br>css</p>
-            <h2>Other</h2>
-            <p>C++<br>C#<br>Visual Basic</p>
+    <div class="development-div">
+        <div class="development-tools">
+            <div class="development-tools-title-div">
+                Development Tools
+            </div>
+
+            <div class="tools-container">
+                <div class="tools-card">
+                    <h2>Proficient</h2>
+                    <p>Tools</p>
+                    <ul>
+                        <span>Ignition Designer</span>
+                        <span>Visual Studio Code</span>
+                        <span>Visual Studio</span>
+                        <span>Microsoft Office Suite</span>
+                        <span>html</span>
+                        <span>css</span>
+                        <span>Github</span>
+                    </ul>
+
+                    <p>Languages</p>
+                    <ul>
+                        <span>Jython</span>
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>MSSQL</span>
+                    </ul>
+                </div>
+                <div class="tools-card">
+                    <h2>Used</h2>
+                    <p>Tools</p>
+                    <ul>
+                        <span>Pycharm</span>
+                        <span>NetBeans</span>
+                        <span>MySQL</span>
+                        <span>Pix4D</span>
+                    </ul>
+
+                    <p>Languages</p>
+                    <ul>
+                        <span>C</span>
+                        <span>C++</span>
+                        <span>C#</span>
+                        <span>ASL</span>
+                        <span>Visual Basic</span>
+                        <span>Java</span>
+                    </ul>
+                </div>
+                <div class="tools-card">
+                    <h2>Studying</h2>
+                    <p>Tools</p>
+                    
+
+                    <p>Languages</p>
+                    <ul>
+                        <span>html</span>
+                        <span>css</span>
+                        <span>django</span>
+                        <span>http</span>
+                        <span>react</span>
+                        <span>css</span>
+                    </ul>
+                </div>
+            </div>
+
         </div>
+
+
     </div>
     <div class="projects-container">
         <div class="featured-projects-div">
-          <div class="projects-title-div">
-            <a>Featured Projects</a>
-          </div>
-        
-  
-          <div class="projects-div">
-            
-            
-            <div class="project-card">
-              <div class="project-label">
-                <div class="project-title">Terraflap</div>
-                <a href="https://github.com/tyshoe/Terraflap" class="project-link">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-external-link"
-                  >
-                    <title>External Link</title>
-                    <path
-                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                    ></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
-                </a>
-              </div>
-              <img src="./images/projects/Terraflap.png" alt="Project Image" />
-              <div class="project-details">
-                <div class="project-description">
-                  A C# Windows Form game inspired by Terraria and Flappy bird. All
-                  assets custom made.
-                </div>
-              </div>
+            <div class="projects-title-div">
+                <a>Featured Projects</a>
             </div>
-  
-            <div class="project-card">
-              <div class="project-label">
-                <div class="project-title">Color Substition</div>
-                <a
-                  href="https://github.com/tyshoe/Change_image_color"
-                  class="project-link"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-external-link"
-                  >
-                    <title>External Link</title>
-                    <path
-                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                    ></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
-                </a>
-              </div>
-              <img
-                src="./images/projects/ColorSubstition.png"
-                alt="Project Image"
-              />
-              <div class="project-details">
-                <div class="project-description">
-                  A Python app for changing an images pixels based on a pixel range.
+
+
+            <div class="projects-div">
+
+
+                <div class="project-card">
+                    <div class="project-label">
+                        <div class="project-title">Terraflap</div>
+                        <a href="https://github.com/tyshoe/Terraflap" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-external-link">
+                                <title>External Link</title>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <img src="./images/projects/Terraflap.png" alt="Project Image" />
+                    <div class="project-details">
+                        <div class="project-description">
+                            A C# Windows Form game inspired by Terraria and Flappy bird. All
+                            assets custom made.
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-  
-            <div class="project-card">
-              <div class="project-label">
-                <div class="project-title">speedrunProfile</div>
-                <a
-                  href="https://github.com/tyshoe/speedrunProfile"
-                  class="project-link"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-external-link"
-                  >
-                    <title>External Link</title>
-                    <path
-                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                    ></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
-                </a>
-              </div>
-              <img
-                src="./images/projects/speedrunProfile.png"
-                alt="Project Image"
-              />
-              <div class="project-details">
-                <div class="project-description">
-                  A Python app for displaying additional information using
-                  speedrun.com REST API.
+
+                <div class="project-card">
+                    <div class="project-label">
+                        <div class="project-title">Color Substition</div>
+                        <a href="https://github.com/tyshoe/Change_image_color" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-external-link">
+                                <title>External Link</title>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <img src="./images/projects/ColorSubstition.png" alt="Project Image" />
+                    <div class="project-details">
+                        <div class="project-description">
+                            A Python app for changing an images pixels based on a pixel range.
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+                <div class="project-card">
+                    <div class="project-label">
+                        <div class="project-title">speedrunProfile</div>
+                        <a href="https://github.com/tyshoe/speedrunProfile" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-external-link">
+                                <title>External Link</title>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <img src="./images/projects/speedrunProfile.png" alt="Project Image" />
+                    <div class="project-details">
+                        <div class="project-description">
+                            A Python app for displaying additional information using
+                            speedrun.com REST API.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
 </body>
 

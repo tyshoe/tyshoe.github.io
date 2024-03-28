@@ -36,15 +36,18 @@ if (themeSelect) {
 
 const activePage = window.location.pathname;
 const activePageName = activePage.split("/")[2];
-const navLinks = document.querySelectorAll("nav a").forEach((link) => {
-  if (
-    link.href.includes(`${activePage}`) &&
-    !link.href.includes("#") &&
-    activePageName !== ""
-  ) {
-    link.classList.add("active");
-  } else if (activePageName === "" && link.href.includes(`index.html`)) {
-    link.classList.add("active");
-  }
-  console.log(activePage);
-});
+const navLinks = document.querySelectorAll("nav a")
+
+if (activePageName === '')
+{
+  navLinks.forEach((link) => {
+    if (link.href.includes("index.html")){link.classList.add("active");}
+  });
+}
+else
+{
+  navLinks.forEach((link) => {
+    if (link.href.includes(`${activePage}`) &&
+     !link.href.includes("#")){link.classList.add("active");}
+  });
+}

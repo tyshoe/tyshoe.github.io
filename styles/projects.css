@@ -1,67 +1,86 @@
 /* CSS styles for the project card */
-.body {
-    display: flex;
-    justify-content: center;
+.temp-container {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.featured-projects-div {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 100%;
+}
+
+.projects-title-div {
+  font-size: 36px;
+  text-align: center;
+  background-color: var(--neutral-50);
+  margin: 16px;
 }
 
 .projects-div {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 36px;
-    width: 90%;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
 }
 
 .project-card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 .project-card img {
-    width: 100%;
-    margin-bottom: 10px;
-    aspect-ratio: 16/9;
+  width: 100%;
+  margin-bottom: 10px;
+  aspect-ratio: 16/9;
 }
+
 .project-thumbnail {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .project-label {
-    display: flex;
+  display: flex;
+}
+
+.project-label a{
+    text-align: right;
+    flex-grow: 1;
 }
 
 .project-title {
-    flex-basis: 90%;
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .project-description {
-    font-size: 14px;
-    margin-bottom: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .project-link {
-    flex-basis: 10%;
-    text-decoration: none;
-    justify-content: flex-end;
-    height: 100%;
+  flex-basis: 10%;
+  text-decoration: none;
+  justify-content: flex-end;
+  height: 100%;
 }
 
 .project-link svg {
-    width: 24px;
-    height: 24px;
-    stroke: var(--neutral-90);
+  width: 24px;
+  height: 24px;
+  stroke: var(--neutral-90);
 }
+
 .project-link svg:hover {
-    opacity: 65%;
+  opacity: 65%;
 }

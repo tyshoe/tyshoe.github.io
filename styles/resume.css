@@ -76,19 +76,19 @@
 
 .social-links {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
     padding: 8px;
 }
 
 .social-link {
     display: inline-block;
-    margin: 0 16px;
+    margin: 4px 4px;
     fill: black;
 }
 
 .social-links svg {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
 }
 
 .social-links svg:hover {

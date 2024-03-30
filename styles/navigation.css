@@ -10,7 +10,7 @@
   /* Safari */
   position: sticky;
   top: 0;
-  border-bottom: solid 1px var(--neutral-50);
+  border-bottom: solid 1px #969595;
 }
 
 nav {
@@ -30,10 +30,10 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--neutral-100);
+  color: var(--body-foreground);
   padding: 8px 24px;
-  background-image: linear-gradient(var(--neutral-100), var(--neutral-100)),
-    linear-gradient(var(--neutral-100), var(--neutral-100));
+  background-image: linear-gradient(var(--body-foreground), var(--body-foreground)),
+    linear-gradient(var(--body-foreground), var(--body-foreground));
   background-size: 0% 2px;
   background-position-y: 100%;
   background-position-x: 0%, 100%;
@@ -51,7 +51,7 @@ a:is(:link, :active).active {
 /* Styling for the select dropdown */
 #theme-select {
   background-color: inherit;
-  color: var(--neutral-100);
+  color: var(--body-foreground);
   padding: 8px;
   border-radius: 8px;
   margin-right: 8px;
@@ -60,58 +60,37 @@ a:is(:link, :active).active {
 /* Styling for the options in the dropdown */
 #theme-select option {
   background-color: inherit;
-  color: var(--neutral-100);
+  color: var(--body-foreground);
 }
 
 :root {
   /* Default Styles */
-  --neutral-10: #fafafa;
-  --neutral-20: #f4f4f4;
-  --neutral-30: #fafafa;
-  --neutral-40: #fafafa;
-  --neutral-50: #a1a1a1;
-  --neutral-60: #878d96;
-  --neutral-70: #5e5e5e;
-  --neutral-80: #515151;
-  --neutral-90: #323232;
-  --neutral-100: #161616;
   --card-background: #f1f1f1;
   --skills-background: #e2e2e2;
   --nav-background: #dfdfdf;
+  --body-background: #fafafa;
+  --body-foreground: #323232;
+  --primary-text: #181818;
 }
 
 /* Themes */
 
 /* Light mode */
 [data-theme="light"] {
-  --neutral-10: #fafafa;
-  --neutral-20: #f4f4f4;
-  --neutral-30: #d8d8d8;
-  --neutral-40: #fafafa;
-  --neutral-50: #a1a1a1;
-  --neutral-60: #878d96;
-  --neutral-70: #5e5e5e;
-  --neutral-80: #515151;
-  --neutral-90: #323232;
-  --neutral-100: #161616;
   --card-background: #f5f5f5;
   --skills-background: #e2e2e2;
   --nav-background: #dfdfdf;
+  --body-background: #fafafa;
+  --body-foreground: #323232;
+  --primary-text: #181818;
 }
 
 /* Dark mode */
 [data-theme="dark"] {
-  --neutral-10: #161616;
-  --neutral-20: #323232;
-  --neutral-30: #515151;
-  --neutral-40: #161616;
-  --neutral-50: #878d96;
-  --neutral-60: #a1a1a1;
-  --neutral-70: #bdbdbd;
-  --neutral-80: #d8d8d8;
-  --neutral-90: #f4f4f4;
-  --neutral-100: #fafafa;
   --card-background: #1a1a1a;
   --skills-background: #272727;
   --nav-background: #333333;
+  --body-background: #161616;
+  --body-foreground: #e6e6e6;
+  --primary-text: #fcfcfc;
 }

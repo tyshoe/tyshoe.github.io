@@ -65,7 +65,7 @@
   background-color: var(--skills-background);
   border-radius: 4px;
   padding: 8px 16px;
-  color: var(--neutral-80);
+  color: var(--body-foreground);
   font-weight: bold;
 }
 

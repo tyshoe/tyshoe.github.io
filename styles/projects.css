@@ -78,7 +78,7 @@
 .project-link svg {
   width: 24px;
   height: 24px;
-  stroke: var(--neutral-90);
+  stroke: var(--body-foreground);
 }
 
 .project-link svg:hover {

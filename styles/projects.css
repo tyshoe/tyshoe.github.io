@@ -12,9 +12,9 @@
 }
 
 .projects-title-div {
-  font-size: 36px;
+  font-size: 32px;
+  font-weight: bold;
   text-align: center;
-  background-color: var(--neutral-50);
   margin: 16px;
 }
 
@@ -34,6 +34,7 @@
   padding: 20px;
   margin: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  background-color: var(--card-background)
 }
 
 .project-card img {

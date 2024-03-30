@@ -207,7 +207,7 @@
 
 .about-right-div ul li {
   margin: 8px 8px;
-  background-color: var(--neutral-30);
+  background-color: var(--skills-background);
   border-radius: 4px;
   padding: 8px 16px;
   color: var(--neutral-80);

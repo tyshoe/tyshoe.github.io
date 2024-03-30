@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 10%;
-  background-color: var(--neutral-30);
+  background-color: var(--nav-background);
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
@@ -75,6 +75,9 @@ a:is(:link, :active).active {
   --neutral-80: #515151;
   --neutral-90: #323232;
   --neutral-100: #161616;
+  --card-background: #f1f1f1;
+  --skills-background: #e2e2e2;
+  --nav-background: #dfdfdf;
 }
 
 /* Themes */
@@ -91,6 +94,9 @@ a:is(:link, :active).active {
   --neutral-80: #515151;
   --neutral-90: #323232;
   --neutral-100: #161616;
+  --card-background: #f5f5f5;
+  --skills-background: #e2e2e2;
+  --nav-background: #dfdfdf;
 }
 
 /* Dark mode */
@@ -105,11 +111,14 @@ a:is(:link, :active).active {
   --neutral-80: #d8d8d8;
   --neutral-90: #f4f4f4;
   --neutral-100: #fafafa;
+  --card-background: #1a1a1a;
+  --skills-background: #272727;
+  --nav-background: #333333;
 }
 
 /* Dev mode */
 [data-theme="dev"] {
-  --neutral-10: #fafafa;
+  --neutral-10: #0d0d0d;
   --neutral-20: #f4f4f4;
   --neutral-30: #d8d8d8;
   --neutral-40: #bdbdbd;
@@ -118,5 +127,7 @@ a:is(:link, :active).active {
   --neutral-70: #5e5e5e;
   --neutral-80: #515151;
   --neutral-90: #323232;
-  --neutral-100: #161616;
+  --neutral-100: #ffffff;
+  --accent: #dd5201;
+  --card-background: #1a1a1a;
 }

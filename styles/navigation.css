@@ -115,19 +115,3 @@ a:is(:link, :active).active {
   --skills-background: #272727;
   --nav-background: #333333;
 }
-
-/* Dev mode */
-[data-theme="dev"] {
-  --neutral-10: #0d0d0d;
-  --neutral-20: #f4f4f4;
-  --neutral-30: #d8d8d8;
-  --neutral-40: #bdbdbd;
-  --neutral-50: #a1a1a1;
-  --neutral-60: #878d96;
-  --neutral-70: #5e5e5e;
-  --neutral-80: #515151;
-  --neutral-90: #323232;
-  --neutral-100: #ffffff;
-  --accent: #dd5201;
-  --card-background: #1a1a1a;
-}

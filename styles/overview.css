@@ -19,7 +19,7 @@
 
 .section-about {
   display: flex;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   justify-content: center;
 }
 

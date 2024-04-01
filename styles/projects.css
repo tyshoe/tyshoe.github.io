@@ -79,6 +79,7 @@
   width: 24px;
   height: 24px;
   stroke: var(--body-foreground);
+  /* background-color: red; */
 }
 
 .project-link svg:hover {

@@ -1,9 +1,6 @@
-const themeSelect = document.getElementById("theme-select")
-  ? document.getElementById("theme-select")
-  : null;
-const currentTheme = localStorage.getItem("theme")
-  ? localStorage.getItem("theme")
-  : null;
+// Get the theme selection dropdown
+const themeSelect = document.getElementById("theme-select") || null;
+const currentTheme = localStorage.getItem("theme") || null;
 
 // Set Dropdown to selected theme
 if (currentTheme) {
@@ -23,31 +20,21 @@ if (themeSelect) {
   });
 }
 
-// Get age
-// var birthdate = new Date('2000-02-04');
-// var currentDate = new Date();
-
-// var birthYear = birthdate.getFullYear();
-// var currentYear = currentDate.getFullYear();
-
-// var age = currentYear - birthYear;
-
-// document.getElementById('age').textContent = age;
-
+// Get active page from the URL
 const activePage = window.location.pathname;
-const activePageName = activePage.split("/")[2];
-const navLinks = document.querySelectorAll("nav a")
+const activePageName = activePage.split("/").pop(); // Get the last part of the URL path
 
-if (activePageName === '')
-{
-  navLinks.forEach((link) => {
-    if (link.href.includes("index.html")){link.classList.add("active");}
-  });
-}
-else
-{
-  navLinks.forEach((link) => {
-    if (link.href.includes(`${activePage}`) &&
-     !link.href.includes("#")){link.classList.add("active");}
-  });
-}
+const navLinks = document.querySelectorAll("nav a");
+
+// Clear existing active classes
+navLinks.forEach((link) => {
+  link.classList.remove("active");
+});
+
+// Add the active class to the correct link
+navLinks.forEach((link) => {
+  // Check if the link's href includes the current page (ignores query params or hash)
+  if (link.href.includes(activePageName)) {
+    link.classList.add("active");
+  }
+});

@@ -1,48 +1,17 @@
-.container {
-    max-width: 1250px;
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    margin: auto;
-    background-color: white;
-}
-
-.left-section,
-.right-section {
-    flex: 1;
-    padding: 20px;
-}
-
-.job {
-    margin-bottom: 30px;
-}
-
-.job ul {
-    list-style-type: disc;
-}
-
-.education {
-    margin-bottom: 30px;
-}
-
-.skills {
-    display: inline-block;
-}
-
-.skills span {
-    display: inline-block;
-    background-color: white;
-    border: 1px solid grey;
-    padding: 5px 10px;
-    margin: 5px;
-    border-radius: 5px;
-}
+/* ============================================
+   Profile card
+   ============================================ */
 
 .profile-section {
-    max-width: 1250px;
     display: flex;
-    margin: auto;
-    background-color: white;
+    align-items: stretch;
+    width: min(1100px, calc(100% - 48px));
+    margin: 40px auto 0;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .profile-card {
@@ -51,17 +20,18 @@
 
 .profile {
     display: flex;
-    margin: 8px;
-    background-color: white;
-    padding: 16px;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
 }
 
 .profile-picture {
-    width: 144px;
-    height: 144px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     overflow: hidden;
-    margin-right: 24px;
+    border: 3px solid var(--accent);
+    flex-shrink: 0;
 }
 
 .profile-picture img {
@@ -74,50 +44,523 @@
     flex: 1;
 }
 
+.profile-info h2 {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.profile-info h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--muted-text);
+    margin: 4px 0 0;
+}
+
 .social-links {
     display: flex;
     flex-direction: column;
+    gap: 10px;
     padding: 8px;
 }
 
 .social-link {
-    display: inline-block;
-    margin: 4px 4px;
-    fill: black;
+    display: inline-flex;
+    fill: var(--muted-text);
+    transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    fill: var(--accent);
+    transform: translateY(-2px);
 }
 
 .social-links svg {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
 }
 
-.social-links svg:hover {
-    opacity: 65%;
+/* Contact handles show only in the printed/PDF version */
+.social-label {
+    display: none;
 }
 
 .cover-section {
     flex-basis: 50%;
-    padding: 16px;
-    margin: 8px;
-    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    border-left: 1px solid var(--border-color);
+    font-size: 15px;
 }
 
-/* Default Styles */
+/* The card already separates the header — hide the old divider */
+body>hr {
+    display: none;
+}
 
-body {
-    font-family: Arial, sans-serif;
+/* ============================================
+   Main two-column layout
+   ============================================ */
+
+.container {
+    display: flex;
+    gap: 48px;
+    width: min(1100px, calc(100% - 48px));
+    margin: 16px auto 0;
+}
+
+.left-section {
+    flex: 1.4;
+}
+
+.right-section {
+    flex: 1;
+}
+
+/* Section headings with accent bar */
+.left-section h2,
+.right-section h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 32px 0 24px;
+    padding-bottom: 10px;
+}
+
+.left-section h2::after,
+.right-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 48px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--accent);
+}
+
+/* ============================================
+   Jobs & education
+   ============================================ */
+
+.job,
+.education {
+    margin-bottom: 28px;
+}
+
+.job h3,
+.education h3 {
+    font-size: 17px;
+    font-weight: 700;
     margin: 0;
+}
+
+.job>p,
+.education>p {
+    color: var(--muted-text);
+    font-size: 14px;
+    margin: 2px 0 8px;
+}
+
+.job>p b,
+.education>p b {
+    color: var(--body-foreground);
+}
+
+.job ul {
+    list-style-type: disc;
+    margin: 8px 0 0;
+    padding-left: 20px;
+}
+
+.job ul li {
+    margin-bottom: 6px;
+    font-size: 15px;
     line-height: 1.6;
-    background-color: white;
-    color: black;
 }
 
-h1,
-h2,
-h3 {
-    margin-bottom: 5px;
+.job ul li::marker {
+    color: var(--accent);
 }
 
-p {
-    margin: 5px 0;
+/* ============================================
+   Skills & certifications
+   ============================================ */
+
+.right-section>h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 24px 0 12px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.skills span {
+    background-color: var(--skills-background);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-text);
+    transition: transform 0.2s ease, border-color 0.2s ease,
+        background-color 0.3s ease;
+}
+
+.skills span:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+
+.right-section hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 28px 0;
+}
+
+.right-section>p {
+    font-size: 15px;
+    color: var(--muted-text);
+    margin: 6px 0;
+}
+
+.right-section>p strong {
+    color: var(--primary-text);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media screen and (max-width: 820px) {
+    .profile-section {
+        flex-direction: column;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cover-section {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* ============================================
+   Download button
+   ============================================ */
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 9px 20px;
+    background-color: var(--accent);
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+[data-theme="dark"] .download-btn {
+    color: #0f172a;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--accent-hover);
+    box-shadow: 0 8px 20px var(--accent-soft);
+}
+
+.download-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ============================================
+   Print / PDF — one-page, two-column, grayscale
+   document (site chrome and photo removed)
+   ============================================ */
+
+@media print {
+    @page {
+        margin: 0.5in;
+        size: letter;
+    }
+
+    :root,
+    [data-theme="dark"],
+    [data-theme="light"] {
+        --body-background: #ffffff;
+        --card-background: #ffffff;
+        --skills-background: #ffffff;
+        --body-foreground: #333333;
+        --primary-text: #111111;
+        --muted-text: #555555;
+        --border-color: #cccccc;
+        --accent: #111111;
+        --accent-soft: transparent;
+        --shadow-color: transparent;
+        --track-background: transparent;
+    }
+
+    .header,
+    .footer,
+    .download-btn,
+    .profile-picture,
+    body>hr {
+        display: none !important;
+    }
+
+    body {
+        background: #ffffff;
+        color: #333333;
+        font-size: 8.5px;
+        line-height: 1.35;
+    }
+
+    /* ---- Header: name/role | contact | summary ---- */
+    .profile-section {
+        display: flex;
+        align-items: flex-start;
+        gap: 28px;
+        width: 100%;
+        max-width: none;
+        margin: 0 0 14px;
+        padding: 0 0 14px;
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .profile-card {
+        flex: 1.25;
+        flex-basis: auto;
+    }
+
+    .profile {
+        display: flex;
+        align-items: flex-start;
+        gap: 36px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .profile-info {
+        flex: 0 0 auto;
+    }
+
+    .profile-info h2 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 0 2px;
+    }
+
+    .profile-info h3 {
+        font-size: 11px;
+        font-weight: 400;
+        color: var(--muted-text);
+        margin: 0;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .social-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--body-foreground);
+        fill: var(--body-foreground);
+        font-size: 9px;
+        text-decoration: none;
+    }
+
+    .social-link svg {
+        width: 13px;
+        height: 13px;
+        fill: var(--body-foreground);
+        stroke: none;
+    }
+
+    .social-label {
+        display: inline;
+    }
+
+    .cover-section {
+        flex: 1;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: none;
+        font-size: 8.5px;
+        line-height: 1.4;
+        color: var(--body-foreground);
+    }
+
+    /* ---- Body: two columns ---- */
+    .container {
+        display: flex;
+        gap: 36px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .left-section {
+        flex: 1.35;
+        padding: 0;
+    }
+
+    .right-section {
+        flex: 1;
+        padding: 0;
+    }
+
+    .left-section h2,
+    .right-section h2 {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--primary-text);
+        margin: 0 0 10px;
+        padding: 0;
+    }
+
+    .left-section h2::after,
+    .right-section h2::after {
+        display: none;
+    }
+
+    /* Jobs */
+    .job {
+        margin-bottom: 12px;
+    }
+
+    .job h3 {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--primary-text);
+        margin: 0;
+    }
+
+    .job>p {
+        font-size: 9px;
+        color: var(--muted-text);
+        margin: 1px 0 4px;
+    }
+
+    .job>p b {
+        color: var(--muted-text);
+        font-weight: 400;
+    }
+
+    .job ul {
+        margin: 0;
+        padding-left: 13px;
+    }
+
+    .job ul li {
+        font-size: 8.5px;
+        line-height: 1.35;
+        margin-bottom: 3px;
+    }
+
+    .job ul li::marker {
+        color: var(--muted-text);
+    }
+
+    /* Education */
+    .education {
+        margin-bottom: 10px;
+    }
+
+    .education h3 {
+        font-size: 10.5px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .education>p {
+        font-size: 9px;
+        color: var(--muted-text);
+        margin: 1px 0 0;
+    }
+
+    /* Right-column subheadings */
+    .right-section>h3 {
+        font-size: 11px;
+        font-weight: 600;
+        margin: 8px 0;
+    }
+
+    /* Outlined skill pills */
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .skills span {
+        background: transparent;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        padding: 3px 8px;
+        font-size: 8px;
+        font-weight: 400;
+        color: var(--body-foreground);
+    }
+
+    .right-section hr {
+        border: none;
+        border-top: 1px solid var(--border-color);
+        margin: 10px 0;
+    }
+
+    /* Certifications */
+    .right-section>p {
+        font-size: 8.5px;
+        color: var(--muted-text);
+        margin: 3px 0;
+    }
+
+    .right-section>p strong {
+        color: var(--primary-text);
+        font-weight: 600;
+    }
+
+    /* Everything fits one page — keep blocks intact */
+    .job,
+    .education {
+        break-inside: avoid;
+    }
 }

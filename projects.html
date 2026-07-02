@@ -3,152 +3,205 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-  <link rel="stylesheet" href="styles/default.css" />
-  <link rel="stylesheet" href="styles/navigation.css" />
-  <link rel="stylesheet" href="styles/projects.css" />
-  <script src="scripts.js" defer></script>
-  <title>Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Set theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      var theme = new URLSearchParams(window.location.search).get("theme") ||
+        localStorage.getItem("theme") || "dark";
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/default.css?v=3" />
+  <link rel="stylesheet" href="styles/navigation.css?v=9" />
+  <link rel="stylesheet" href="styles/projects.css?v=2" />
+  <script src="scripts.js?v=2" defer></script>
+  <title>Projects — Tyler Shoemake</title>
 </head>
 
 <body>
   <header class="header">
-    <div></div>
+    <a href="index.html" class="brand">tyshoe<span>.dev</span></a>
     <nav class="nav">
       <ul>
         <li><a href="index.html" class="expand">Home</a></li>
-        <li>
-          <a href="resume.html" class="expand">Resume</a>
-        </li>
+        <li><a href="resume.html" class="expand">Resume</a></li>
         <li><a href="projects.html" class="expand">Projects</a></li>
       </ul>
     </nav>
 
-    <select id="theme-select">
-      <option value="light">Light Mode</option>
-      <option value="dark">Dark Mode</option>
-    </select>
+    <button id="theme-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <svg class="icon-sun" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
   </header>
 
   <div class="projects-container">
     <div class="featured-projects-div">
-      <div class="projects-title-div">
-        <a>FEATURED PROJECTS</a>
-      </div>
-
+      <p class="section-title">Portfolio</p>
+      <h2 class="section-heading">Featured Projects</h2>
 
       <div class="projects-div">
-
-
         <div class="project-card">
-          <div class="project-label">
-            <div class="project-title">Terraflap</div>
-            <a href="https://github.com/tyshoe/Terraflap" class="project-link" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="black"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                <title>External Link</title>
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
+          <div class="project-image">
+            <img src="./images/projects/Terraflap.png" alt="Screenshot of the Terraflap game" />
           </div>
-          <img src="./images/projects/Terraflap.png" alt="Project Image" />
           <div class="project-details">
+            <div class="project-label">
+              <div class="project-title">Terraflap</div>
+              <a href="https://github.com/tyshoe/Terraflap" class="project-link" target="_blank"
+                aria-label="View Terraflap on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <title>External Link</title>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
             <div class="project-description">
-              A C# Windows Form game inspired by Terraria and Flappy bird. All
+              A C# Windows Forms game inspired by Terraria and Flappy Bird. All
               assets custom made.
             </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-label">
-            <div class="project-title">Color Substition</div>
-            <a href="https://github.com/tyshoe/Change_image_color" class="project-link" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="black"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                <title>External Link</title>
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-          <img src="./images/projects/ColorSubstition.png" alt="Project Image" />
-          <div class="project-details">
-            <div class="project-description">
-              A Python app for changing an images pixels based on a pixel range.
+            <div class="project-tags">
+              <span>C#</span>
+              <span>WinForms</span>
+              <span>Game Dev</span>
             </div>
           </div>
         </div>
 
         <div class="project-card">
-          <div class="project-label">
-            <div class="project-title">speedrunProfile</div>
-            <a href="https://github.com/tyshoe/speedrunProfile" class="project-link" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="black"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                <title>External Link</title>
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
+          <div class="project-image">
+            <img src="./images/projects/ColorSubstition.png" alt="Screenshot of the Color Substitution app" />
           </div>
-          <img src="./images/projects/speedrunProfile.png" alt="Project Image" />
           <div class="project-details">
+            <div class="project-label">
+              <div class="project-title">Color Substitution</div>
+              <a href="https://github.com/tyshoe/Change_image_color" class="project-link" target="_blank"
+                aria-label="View Color Substitution on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <title>External Link</title>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
             <div class="project-description">
-              A Python app for displaying additional information using
+              A Python app for changing an image's pixels based on a pixel range.
+            </div>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Image Processing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./images/projects/speedrunProfile.png" alt="Screenshot of the speedrunProfile app" />
+          </div>
+          <div class="project-details">
+            <div class="project-label">
+              <div class="project-title">speedrunProfile</div>
+              <a href="https://github.com/tyshoe/speedrunProfile" class="project-link" target="_blank"
+                aria-label="View speedrunProfile on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <title>External Link</title>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+            <div class="project-description">
+              A Python app for displaying additional information using the
               speedrun.com REST API.
             </div>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>REST API</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="projects-container">
     <div class="featured-projects-div">
-      <div class="projects-title-div">
-        <a>IGNITION EXCHANGE RESOURCES</a>
-      </div>
-      <div class="projects-div">
+      <p class="section-title">Community</p>
+      <h2 class="section-heading">Ignition Exchange Resources</h2>
 
+      <div class="projects-div">
         <div class="project-card">
-          <div class="project-label">
-            <div class="project-title">Active Alarms</div>
-            <a href="https://inductiveautomation.com/exchange/2621/overview" class="project-link" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="black"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                <title>External Link</title>
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
           <div class="project-details">
+            <div class="project-label">
+              <div class="project-title">Active Alarms</div>
+              <a href="https://inductiveautomation.com/exchange/2621/overview" class="project-link" target="_blank"
+                aria-label="View Active Alarms on Ignition Exchange">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <title>External Link</title>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
             <div class="project-description">
-              A vision template for displaying the count of active alarms within an ignition project.
+              A Vision template for displaying the count of active alarms
+              within an Ignition project.
+            </div>
+            <div class="project-tags">
+              <span>Ignition</span>
+              <span>Vision</span>
             </div>
           </div>
         </div>
+
         <div class="project-card">
-          <div class="project-label">
-            <div class="project-title">Auto Logout</div>
-            <a href="https://inductiveautomation.com/exchange/2600/overview" class="project-link" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="black"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                <title>External Link</title>
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
           <div class="project-details">
+            <div class="project-label">
+              <div class="project-title">Auto Logout</div>
+              <a href="https://inductiveautomation.com/exchange/2600/overview" class="project-link" target="_blank"
+                aria-label="View Auto Logout on Ignition Exchange">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <title>External Link</title>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
             <div class="project-description">
-              A vision window for that warns a user they about to logged out.
+              A Vision window that warns users they are about to be logged out.
+            </div>
+            <div class="project-tags">
+              <span>Ignition</span>
+              <span>Vision</span>
             </div>
           </div>
         </div>
@@ -156,9 +209,9 @@
     </div>
   </div>
 
-
-
-
+  <footer class="footer">
+    <p>Designed &amp; built by Tyler Shoemake</p>
+  </footer>
 </body>
 
 </html>

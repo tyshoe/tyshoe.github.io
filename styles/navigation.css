@@ -1,96 +1,198 @@
-/* Navigation */
+/* ============================================
+   Theme variables
+   ============================================ */
+
+/* Dark is the default theme */
+:root {
+  --body-background: #0f172a;
+  --card-background: #1e293b;
+  --skills-background: rgba(147, 197, 253, 0.12);
+  --nav-background: rgba(15, 23, 42, 0.85);
+  --track-background: rgba(0, 0, 0, 0.25);
+  --body-foreground: #cbd5e1;
+  --primary-text: #f1f5f9;
+  --muted-text: #94a3b8;
+  --border-color: #334155;
+  --accent: #93c5fd;
+  --accent-hover: #bfdbfe;
+  --accent-soft: rgba(147, 197, 253, 0.15);
+  --shadow-color: rgba(0, 0, 0, 0.35);
+  --shadow-color-strong: rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="light"] {
+  --body-background: #e2e8f0;
+  --card-background: #ffffff;
+  --skills-background: #dbeafe;
+  --nav-background: rgba(226, 232, 240, 0.85);
+  --track-background: rgba(15, 23, 42, 0.06);
+  --body-foreground: #334155;
+  --primary-text: #0f172a;
+  --muted-text: #64748b;
+  --border-color: #cbd5e1;
+  --accent: #1d4ed8;
+  --accent-hover: #1e40af;
+  --accent-soft: rgba(29, 78, 216, 0.1);
+  --shadow-color: rgba(15, 23, 42, 0.1);
+  --shadow-color-strong: rgba(15, 23, 42, 0.2);
+}
+
+/* Smooth color change when switching themes */
+body,
+.header,
+.project-card,
+.skills span {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ============================================
+   Header / navigation
+   ============================================ */
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10%;
+  gap: 16px;
+  padding: 0 8%;
   background-color: var(--nav-background);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
   top: 0;
-  border-bottom: solid 1px #969595;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--primary-text);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.brand span {
+  color: var(--accent);
 }
 
 nav {
-  background-color: inherit;
+  background-color: transparent;
 }
 
 nav ul {
-  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
   margin: 8px;
+  background-color: var(--track-background);
+  border-radius: 999px;
 }
 
 nav ul li {
   display: inline-block;
-  background-color: inherit;
-  padding: 8px 0;
-  margin: 0 4px 0 4px;
 }
 
 nav ul li a {
+  display: inline-block;
   color: var(--body-foreground);
-  padding: 8px 24px;
-  background-image: linear-gradient(var(--body-foreground), var(--body-foreground)),
-    linear-gradient(var(--body-foreground), var(--body-foreground));
-  background-size: 0% 2px;
-  background-position-y: 100%;
-  background-position-x: 0%, 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.5s ease-in-out;
+  padding: 8px 20px;
+  font-weight: 500;
+  border-radius: 999px;
   text-decoration: none;
+  transition: color 0.25s ease, background-color 0.25s ease;
 }
 
-a:hover,
-a:active,
-a:is(:link, :active).active {
-  background-size: 100% 2px;
+nav ul li a:hover {
+  color: var(--primary-text);
+  background-color: var(--accent-soft);
 }
 
-/* Styling for the select dropdown */
-#theme-select {
-  background-color: inherit;
-  color: var(--body-foreground);
+nav ul li a.active,
+nav ul li a.active:hover {
+  color: var(--accent);
+  background-color: var(--card-background);
+  font-weight: 600;
+  box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+/* ============================================
+   Theme toggle button
+   ============================================ */
+
+#theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   padding: 8px;
-  border-radius: 8px;
-  margin-right: 8px;
-}
-
-/* Styling for the options in the dropdown */
-#theme-select option {
-  background-color: inherit;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background-color: transparent;
   color: var(--body-foreground);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.3s ease;
+  flex-shrink: 0;
 }
 
-:root {
-  /* Default Styles */
-  --card-background: #f1f1f1;
-  --skills-background: #e2e2e2;
-  --nav-background: #dfdfdf;
-  --body-background: #fafafa;
-  --body-foreground: #323232;
-  --primary-text: #181818;
+#theme-toggle:hover {
+  background-color: var(--accent-soft);
+  transform: scale(1.08);
 }
 
-/* Themes */
-
-/* Light mode */
-[data-theme="light"] {
-  --card-background: #f5f5f5;
-  --skills-background: #e2e2e2;
-  --nav-background: #dfdfdf;
-  --body-background: #fafafa;
-  --body-foreground: #323232;
-  --primary-text: #181818;
+#theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
 }
 
-/* Dark mode */
-[data-theme="dark"] {
-  --card-background: #1a1a1a;
-  --skills-background: #272727;
-  --nav-background: #333333;
-  --body-background: #161616;
-  --body-foreground: #e6e6e6;
-  --primary-text: #fcfcfc;
+/* Show the icon of the theme you would switch TO */
+#theme-toggle .icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] #theme-toggle .icon-sun {
+  display: block;
+}
+
+[data-theme="dark"] #theme-toggle .icon-moon {
+  display: none;
+}
+
+/* ============================================
+   Mobile
+   ============================================ */
+
+@media (max-width: 640px) {
+  .header {
+    padding: 0 12px;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+
+  nav ul {
+    margin: 4px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  #theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
 }

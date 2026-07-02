@@ -1,40 +1,29 @@
-// Get the theme selection dropdown
-const themeSelect = document.getElementById("theme-select") || null;
-const currentTheme = localStorage.getItem("theme") || null;
+// ============================================
+// Theme toggle
+// (initial theme is set by the inline script in
+// each page's <head> to avoid a flash of the
+// wrong theme before this file loads)
+// ============================================
 
-// Set Dropdown to selected theme
-if (currentTheme) {
-  document.documentElement.setAttribute("data-theme", currentTheme);
-  if (themeSelect) {
-    themeSelect.value = currentTheme;
-  }
-}
+const themeToggle = document.getElementById("theme-toggle");
 
-// If theme changes, store in local storage
-if (themeSelect) {
-  themeSelect.addEventListener("change", function () {
-    const selectedTheme = themeSelect.value;
-    document.documentElement.setAttribute("data-theme", selectedTheme);
-    localStorage.setItem("theme", selectedTheme);
-    console.log(themeSelect.value);
+if (themeToggle) {
+  themeToggle.addEventListener("click", function () {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
   });
 }
 
-// Get active page from the URL
-const activePage = window.location.pathname;
-const activePageName = activePage.split("/").pop(); // Get the last part of the URL path
+// ============================================
+// Highlight the nav link for the current page
+// ============================================
 
-const navLinks = document.querySelectorAll("nav a");
+// On the root URL ("/") pathname ends with "", so fall back to index.html
+const activePageName = window.location.pathname.split("/").pop() || "index.html";
 
-// Clear existing active classes
-navLinks.forEach((link) => {
-  link.classList.remove("active");
-});
-
-// Add the active class to the correct link
-navLinks.forEach((link) => {
-  // Check if the link's href includes the current page (ignores query params or hash)
-  if (link.href.includes(activePageName)) {
-    link.classList.add("active");
-  }
+document.querySelectorAll("nav a").forEach((link) => {
+  const linkPage = link.getAttribute("href").split("/").pop();
+  link.classList.toggle("active", linkPage === activePageName);
 });

@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/default.css?v=3" />
   <link rel="stylesheet" href="styles/navigation.css?v=11" />
-  <link rel="stylesheet" href="styles/projects.css?v=4" />
+  <link rel="stylesheet" href="styles/projects.css?v=5" />
   <script src="scripts.js?v=2" defer></script>
   <title>Projects — Tyler Shoemake</title>
 </head>
@@ -55,10 +55,43 @@
 
   <div class="projects-container">
     <div class="featured-projects-div">
-      <p class="section-title">Portfolio</p>
-      <h2 class="section-heading">Featured Projects</h2>
+      <p class="section-title">Software</p>
+      <h2 class="section-heading">Standalone Projects</h2>
 
       <div class="projects-div">
+        <div class="project-card">
+          <div class="project-image is-placeholder">
+            <span>RS</span>
+          </div>
+          <div class="project-details">
+            <div class="project-label">
+              <div class="project-title">ReadStats</div>
+              <a href="https://github.com/tyshoe/ReadStats" class="project-link" target="_blank"
+                aria-label="View ReadStats on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <title>External Link</title>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+            <div class="project-subtitle">Personal Project · On the App Store</div>
+            <div class="project-description">
+              My largest project to date — a cross-platform mobile app (iOS
+              live, Android coming) to log books, track reading sessions, and
+              view detailed stats like pages read, time spent, and average
+              reading speed.
+            </div>
+            <div class="project-tags">
+              <span>Mobile App</span>
+              <span>Flutter</span>
+              <span>Dart</span>
+            </div>
+          </div>
+        </div>
+
         <div class="project-card">
           <div class="project-image">
             <img src="./images/projects/Terraflap.png" alt="Screenshot of the Terraflap game" />
@@ -77,6 +110,7 @@
                 </svg>
               </a>
             </div>
+            <div class="project-subtitle">Senior Capstone Project</div>
             <div class="project-description">
               A C# Windows Forms game inspired by Terraria and Flappy Bird. All
               assets custom made.
@@ -107,8 +141,11 @@
                 </svg>
               </a>
             </div>
+            <div class="project-subtitle">Work Project</div>
             <div class="project-description">
-              A Python app for changing an image's pixels based on a pixel range.
+              A work project where I took a colleague's existing tool and
+              collaborated with them to modify it for my needs — recoloring an
+              image's pixels within a target range.
             </div>
             <div class="project-tags">
               <span>Python</span>
@@ -135,13 +172,33 @@
                 </svg>
               </a>
             </div>
+            <div class="project-subtitle">Personal Project · Archived</div>
             <div class="project-description">
-              A Python app for displaying additional information using the
-              speedrun.com REST API.
+              An archived personal project that pulled extra stats and info
+              from the speedrun.com REST API to enrich user profiles.
             </div>
             <div class="project-tags">
               <span>Python</span>
               <span>REST API</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image is-placeholder">
+            <span>TRT</span>
+          </div>
+          <div class="project-details">
+            <div class="project-label">
+              <div class="project-title">Tarkov Raid Timer</div>
+            </div>
+            <div class="project-subtitle">Personal Project</div>
+            <div class="project-description">
+              A Python app that displays the current in-game raid time for
+              Escape from Tarkov.
+            </div>
+            <div class="project-tags">
+              <span>Python</span>
             </div>
           </div>
         </div>
@@ -151,8 +208,8 @@
 
   <div class="projects-container">
     <div class="featured-projects-div">
-      <p class="section-title">Community</p>
-      <h2 class="section-heading">Ignition Exchange Resources</h2>
+      <p class="section-title">Community &amp; Personal</p>
+      <h2 class="section-heading">Smaller Builds</h2>
 
       <div class="projects-div">
         <div class="project-card">
@@ -216,6 +273,55 @@
                 <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg>
               <span><strong>100+</strong> downloads</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-details">
+            <div class="project-label">
+              <div class="project-title">Cellular Data Tracker</div>
+            </div>
+            <div class="project-subtitle">iOS Shortcut</div>
+            <div class="project-description">
+              Screenshots the iOS cellular data screen and logs how much
+              data I've used this month, so my usage is tracked
+              automatically at a glance.
+            </div>
+            <div class="project-tags">
+              <span>Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-details">
+            <div class="project-label">
+              <div class="project-title">Speedrun Notifications</div>
+            </div>
+            <div class="project-subtitle">iOS Widget</div>
+            <div class="project-description">
+              A home-screen widget that polls the speedrun.com API and
+              surfaces any new notifications without opening the site.
+            </div>
+            <div class="project-tags">
+              <span>speedrun.com API</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-details">
+            <div class="project-label">
+              <div class="project-title">Creek Gauge Level</div>
+            </div>
+            <div class="project-subtitle">iOS Widget</div>
+            <div class="project-description">
+              A Scriptable widget that shows the current creek gauge level
+              right on my home screen, pulled live from public gauge data.
+            </div>
+            <div class="project-tags">
+              <span>Scriptable</span>
             </div>
           </div>
         </div>

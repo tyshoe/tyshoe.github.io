@@ -56,6 +56,23 @@
   transform: scale(1.05);
 }
 
+/* Placeholder for cards without a screenshot: keeps the same 16:9
+   footprint so image and image-less cards size identically. */
+.project-image.is-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent-soft), var(--card-background));
+}
+
+.project-image.is-placeholder span {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  opacity: 0.75;
+}
+
 .project-details {
   display: flex;
   flex-direction: column;

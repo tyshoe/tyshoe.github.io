@@ -170,16 +170,21 @@ nav ul li a.active:hover {
 
 @media (max-width: 640px) {
   .header {
-    padding: 0 12px;
-    flex-wrap: wrap;
+    padding: 0 8px;
+    gap: 4px;
+    /* Keep brand, nav, and toggle on a single row */
+    flex-wrap: nowrap;
   }
 
   .brand {
-    font-size: 16px;
+    font-size: 14px;
+    flex-shrink: 0;
   }
 
   nav ul {
-    margin: 4px;
+    margin: 4px 0;
+    padding: 3px;
+    gap: 2px;
   }
 
   nav ul li {
@@ -187,12 +192,13 @@ nav ul li a.active:hover {
   }
 
   nav ul li a {
-    padding: 8px 10px;
-    font-size: 15px;
+    padding: 5px 8px;
+    font-size: 12px;
   }
 
   #theme-toggle {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
   }
 }

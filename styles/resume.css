@@ -38,6 +38,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 40%;
 }
 
 .profile-info {
@@ -338,8 +339,8 @@ body>hr {
     body {
         background: #ffffff;
         color: #333333;
-        font-size: 8.5px;
-        line-height: 1.35;
+        font-size: 10px;
+        line-height: 1.4;
     }
 
     /* ---- Header: name/role | contact | summary ---- */
@@ -349,8 +350,8 @@ body>hr {
         gap: 28px;
         width: 100%;
         max-width: none;
-        margin: 0 0 14px;
-        padding: 0 0 14px;
+        margin: 0 0 16px;
+        padding: 0 0 16px;
         border: none;
         border-bottom: 1px solid var(--border-color);
         border-radius: 0;
@@ -358,8 +359,7 @@ body>hr {
     }
 
     .profile-card {
-        flex: 1.25;
-        flex-basis: auto;
+        flex: 0 1 auto;
     }
 
     .profile {
@@ -375,13 +375,13 @@ body>hr {
     }
 
     .profile-info h2 {
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 700;
-        margin: 0 0 2px;
+        margin: 0 0 3px;
     }
 
     .profile-info h3 {
-        font-size: 11px;
+        font-size: 13px;
         font-weight: 400;
         color: var(--muted-text);
         margin: 0;
@@ -401,13 +401,13 @@ body>hr {
         gap: 8px;
         color: var(--body-foreground);
         fill: var(--body-foreground);
-        font-size: 9px;
+        font-size: 10.5px;
         text-decoration: none;
     }
 
     .social-link svg {
-        width: 13px;
-        height: 13px;
+        width: 15px;
+        height: 15px;
         fill: var(--body-foreground);
         stroke: none;
     }
@@ -422,8 +422,8 @@ body>hr {
         margin: 0;
         padding: 0;
         border: none;
-        font-size: 8.5px;
-        line-height: 1.4;
+        font-size: 10px;
+        line-height: 1.45;
         color: var(--body-foreground);
     }
 
@@ -448,10 +448,10 @@ body>hr {
 
     .left-section h2,
     .right-section h2 {
-        font-size: 15px;
+        font-size: 17px;
         font-weight: 600;
         color: var(--primary-text);
-        margin: 0 0 10px;
+        margin: 0 0 13px;
         padding: 0;
     }
 
@@ -462,20 +462,20 @@ body>hr {
 
     /* Jobs */
     .job {
-        margin-bottom: 12px;
+        margin-bottom: 16px;
     }
 
     .job h3 {
-        font-size: 11px;
+        font-size: 13px;
         font-weight: 600;
         color: var(--primary-text);
         margin: 0;
     }
 
     .job>p {
-        font-size: 9px;
+        font-size: 10px;
         color: var(--muted-text);
-        margin: 1px 0 4px;
+        margin: 2px 0 5px;
     }
 
     .job>p b {
@@ -485,13 +485,13 @@ body>hr {
 
     .job ul {
         margin: 0;
-        padding-left: 13px;
+        padding-left: 16px;
     }
 
     .job ul li {
-        font-size: 8.5px;
-        line-height: 1.35;
-        margin-bottom: 3px;
+        font-size: 10px;
+        line-height: 1.4;
+        margin-bottom: 4px;
     }
 
     .job ul li::marker {
@@ -500,42 +500,42 @@ body>hr {
 
     /* Education */
     .education {
-        margin-bottom: 10px;
+        margin-bottom: 13px;
     }
 
     .education h3 {
-        font-size: 10.5px;
+        font-size: 12px;
         font-weight: 600;
         margin: 0;
     }
 
     .education>p {
-        font-size: 9px;
+        font-size: 10px;
         color: var(--muted-text);
-        margin: 1px 0 0;
+        margin: 2px 0 0;
     }
 
     /* Right-column subheadings */
     .right-section>h3 {
-        font-size: 11px;
+        font-size: 13px;
         font-weight: 600;
-        margin: 8px 0;
+        margin: 12px 0 8px;
     }
 
     /* Outlined skill pills */
     .skills {
         display: flex;
         flex-wrap: wrap;
-        gap: 6px;
-        margin-bottom: 8px;
+        gap: 7px;
+        margin-bottom: 11px;
     }
 
     .skills span {
         background: transparent;
         border: 1px solid var(--border-color);
         border-radius: 4px;
-        padding: 3px 8px;
-        font-size: 8px;
+        padding: 4px 10px;
+        font-size: 9.5px;
         font-weight: 400;
         color: var(--body-foreground);
     }
@@ -543,14 +543,14 @@ body>hr {
     .right-section hr {
         border: none;
         border-top: 1px solid var(--border-color);
-        margin: 10px 0;
+        margin: 13px 0;
     }
 
     /* Certifications */
     .right-section>p {
-        font-size: 8.5px;
+        font-size: 10px;
         color: var(--muted-text);
-        margin: 3px 0;
+        margin: 4px 0;
     }
 
     .right-section>p strong {
